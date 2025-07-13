@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "535487403861",
+    "project_id": "paygo-e06b5",
+    "storage_bucket": "paygo-e06b5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535487403861:android:a6856705d039a2352401dc",
+        "android_client_info": {
+          "package_name": "uz.paygo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8Mxlvg8W33QI__tKOHnIUp66YlecAnfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
