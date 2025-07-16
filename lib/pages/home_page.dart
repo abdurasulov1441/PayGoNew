@@ -24,12 +24,9 @@ class HomePage extends StatelessWidget {
           context.go(Routes.userPage);
           break;
         case 2:
-          context.go(Routes.taxiPage);
-          break;
-        case 3:
           context.go(Routes.truckPage);
           break;
-        case 4:
+        case 3:
           context.go(Routes.adminPage);
           break;
         default:
@@ -48,7 +45,7 @@ class HomePage extends StatelessWidget {
             backgroundColor: AppColors.backgroundColor,
             body: Center(
               child: Lottie.asset(
-                'assets/lotties/loading.json',
+                'assets/lotties/loading_truck.json',
                 width: 200,
                 height: 200,
                 fit: BoxFit.contain,

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:paygo/pages/user/account/page/user_account_page.dart';
+import 'package:paygo/pages/user/home/page/user_page.dart';
+import 'package:paygo/pages/user/news/page/user_news_page.dart';
+import 'package:paygo/pages/user/orders/page/user_orders_page.dart';
 import 'package:paygo/services/style/app_colors.dart';
 
 class UserPage extends StatefulWidget {
@@ -12,10 +16,10 @@ class UserPage extends StatefulWidget {
 class _UserPageState extends State<UserPage> {
   int _selectedIndex = 0;
   final List<Widget> _pages = [
-    const Center(child: Text('Asosiy', style: TextStyle(fontSize: 24))),
-    const Center(child: Text('Buyurtmalar', style: TextStyle(fontSize: 24))),
-    const Center(child: Text('Yangiliklar', style: TextStyle(fontSize: 24))),
-    const Center(child: Text('Sozlamalar', style: TextStyle(fontSize: 24))),
+    UserHomePage(),
+    UserOrdersPage(),
+    UserNewsPage(),
+    UserAccountPage(),
   ];
 
   final List<Map<String, dynamic>> _menuItems = [
@@ -37,6 +41,7 @@ class _UserPageState extends State<UserPage> {
       backgroundColor: AppColors.backgroundColor,
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: AppColors.backgroundColor,
         items: _menuItems
             .map(
               (item) => BottomNavigationBarItem(

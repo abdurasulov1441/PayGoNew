@@ -7,15 +7,15 @@ import 'package:paygo/pages/auth/verify/page/verify_page.dart';
 import 'package:paygo/pages/blocked_users_page.dart';
 import 'package:paygo/pages/home_page.dart';
 import 'package:paygo/pages/splash_page.dart';
-import 'package:paygo/pages/taxi/taxi_page.dart';
 import 'package:paygo/pages/truck/truck_page.dart';
+import 'package:paygo/pages/user/home/page/create_order.dart';
+import 'package:paygo/pages/user/home/page/search_truck.dart';
 import 'package:paygo/pages/user/user_page.dart';
 
 abstract class Routes {
   static const splashScreen = '/splashScreen';
   static const homePage = '/homePage';
   static const userPage = '/userPage';
-  static const taxiPage = '/taxiPage';
   static const truckPage = '/truckPage';
   static const adminPage = '/adminPage';
   static const blockedPage = '/blockedPage';
@@ -23,6 +23,8 @@ abstract class Routes {
   static const registerPage = '/registerPage';
   static const loginPage = '/loginPage';
   static const roleSelectPage = '/roleSelectPage';
+  static const createOrderPage = '/createOrderPage';
+  static const searchTruckPage = '/searchTruckPage';
 }
 
 String _initialLocation() {
@@ -48,10 +50,6 @@ final router = GoRouter(
     GoRoute(
       path: Routes.userPage,
       builder: (context, state) => const UserPage(),
-    ),
-    GoRoute(
-      path: Routes.taxiPage,
-      builder: (context, state) => const TaxiPage(),
     ),
     GoRoute(
       path: Routes.truckPage,
@@ -80,6 +78,14 @@ final router = GoRouter(
     GoRoute(
       path: Routes.roleSelectPage,
       builder: (context, state) => const RoleSelectPage(),
+    ),
+    GoRoute(
+      path: Routes.createOrderPage,
+      builder: (context, state) => const CreateOrderPage(),
+    ),
+    GoRoute(
+      path: Routes.searchTruckPage,
+      builder: (context, state) => const SearchTruckPage(),
     ),
   ],
 );
