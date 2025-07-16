@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paygo/services/style/app_colors.dart';
 
 class UserNewsPage extends StatelessWidget {
   const UserNewsPage({super.key});
@@ -35,7 +36,7 @@ class UserNewsPage extends StatelessWidget {
         foregroundColor: Colors.black,
         elevation: 1,
       ),
-      backgroundColor: const Color(0xFFF9F9F9),
+      backgroundColor: AppColors.ui,
       body: ListView.separated(
         padding: const EdgeInsets.all(16),
         itemCount: fakeNews.length,
@@ -43,6 +44,7 @@ class UserNewsPage extends StatelessWidget {
         itemBuilder: (context, index) {
           final news = fakeNews[index];
           return Card(
+            color: AppColors.backgroundColor,
             elevation: 2,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
