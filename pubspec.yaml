@@ -34,6 +34,9 @@ dependencies:
   flutter_map: ^8.1.1
   latlong2: ^0.9.1
   geolocator: ^14.0.2
+  avatar_glow: ^3.0.1
+  expansion_tile_card: ^3.0.0
+  in_app_review: ^2.0.10
 
 dev_dependencies:
   flutter_test:

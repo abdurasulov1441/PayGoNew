@@ -7,6 +7,11 @@ import 'package:paygo/pages/auth/verify/page/verify_page.dart';
 import 'package:paygo/pages/blocked_users_page.dart';
 import 'package:paygo/pages/home_page.dart';
 import 'package:paygo/pages/splash_page.dart';
+import 'package:paygo/pages/truck/account/page/account_detail_info/account_detail_info_taksi.dart';
+import 'package:paygo/pages/truck/account/page/get_balance/balance_page.dart';
+import 'package:paygo/pages/truck/account/page/get_tarifs/tarifs_page.dart';
+import 'package:paygo/pages/truck/account/page/payment_history/payment_history.dart';
+import 'package:paygo/pages/truck/account/page/settings/app_info.dart';
 import 'package:paygo/pages/truck/truck_page.dart';
 import 'package:paygo/pages/user/home/page/create_order.dart';
 import 'package:paygo/pages/user/home/page/search_truck.dart';
@@ -25,6 +30,13 @@ abstract class Routes {
   static const roleSelectPage = '/roleSelectPage';
   static const createOrderPage = '/createOrderPage';
   static const searchTruckPage = '/searchTruckPage';
+
+  static const truckBalancePage = '/truckBalancePage';
+  static const truckTarifsPage = '/truckTarifsPage';
+  static const accountDetailInfoPage = '/accountDetailInfoPage';
+  static const truckPaymentHistory = '/truckPaymentHistory';
+  static const truckSettingsPage = '/truckSettingsPage';
+  static const appInfoPage = '/appInfoPage';
 }
 
 String _initialLocation() {
@@ -86,6 +98,26 @@ final router = GoRouter(
     GoRoute(
       path: Routes.searchTruckPage,
       builder: (context, state) => const SearchTruckPage(),
+    ),
+    GoRoute(
+      path: Routes.truckBalancePage,
+      builder: (context, state) => const BalancePage(),
+    ),
+    GoRoute(
+      path: Routes.truckTarifsPage,
+      builder: (context, state) => const TariffsPage(),
+    ),
+    GoRoute(
+      path: Routes.accountDetailInfoPage,
+      builder: (context, state) => const AccountDetailInfo(),
+    ),
+    GoRoute(
+      path: Routes.truckPaymentHistory,
+      builder: (context, state) => const PaymentHistoryPage(),
+    ),
+    GoRoute(
+      path: Routes.appInfoPage,
+      builder: (context, state) => const AppInfo(),
     ),
   ],
 );
