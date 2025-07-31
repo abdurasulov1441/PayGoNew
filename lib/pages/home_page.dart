@@ -20,6 +20,9 @@ class HomePage extends StatelessWidget {
         case 3:
           router.go(Routes.adminPage);
           break;
+        case 5:
+          router.go(Routes.loginPage);
+          break;
         default:
           router.go(Routes.userPage);
       }
@@ -104,6 +107,14 @@ class HomePage extends StatelessWidget {
             color: Colors.red,
             roleId: 1,
             status: 0,
+          ),
+          _buildRoleCard(
+            context: context,
+            icon: Icons.login,
+            label: "Login",
+            color: Colors.yellow,
+            roleId: 5,
+            status: 1,
           ),
         ],
       ),

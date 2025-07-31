@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:paygo/pages/user/news/page/user_news_page.dart';
 import 'package:paygo/services/style/app_colors.dart';
 import 'package:paygo/pages/truck/account/page/truck_account.dart';
 import 'package:paygo/pages/truck/active_order/page/active_order_truck.dart';
-import 'package:paygo/pages/truck/news/page/news_truck.dart';
 import 'package:paygo/pages/truck/order/page/order_truck.dart';
 
 class TruckPage extends StatefulWidget {
@@ -18,7 +18,8 @@ class _TruckPageState extends State<TruckPage> {
   final List<Widget> _pages = [
     OrderTruck(),
     ActiveOrderTruck(),
-    NewsTruck(),
+    UserNewsPage(),
+    // NewsTruck(),
     TruckAccount(),
   ];
 

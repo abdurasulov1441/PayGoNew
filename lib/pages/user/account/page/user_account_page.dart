@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:paygo/app/router.dart';
 
 class UserAccountPage extends StatelessWidget {
   const UserAccountPage({super.key});
@@ -55,6 +57,7 @@ class UserAccountPage extends StatelessWidget {
                   icon: Icons.logout,
                   title: "Chiqish",
                   onTap: () {
+                    context.go(Routes.homePage);
                     ScaffoldMessenger.of(
                       context,
                     ).showSnackBar(const SnackBar(content: Text("Chiqildi")));

@@ -3,7 +3,7 @@ import 'package:paygo/pages/admin/admin_page.dart';
 import 'package:paygo/pages/auth/login/page/login_page.dart';
 import 'package:paygo/pages/auth/register/page/register_page.dart';
 import 'package:paygo/pages/auth/role/page/role_select_page.dart';
-import 'package:paygo/pages/auth/verify/page/verify_page.dart';
+import 'package:paygo/pages/auth/verify/page/smsverify.dart';
 import 'package:paygo/pages/blocked_users_page.dart';
 import 'package:paygo/pages/home_page.dart';
 import 'package:paygo/pages/splash_page.dart';
@@ -83,9 +83,12 @@ final router = GoRouter(
       path: Routes.registerPage,
       builder: (context, state) => const RegisterPage(),
     ),
-    GoRoute(
+     GoRoute(
       path: Routes.verifyPage,
-      builder: (context, state) => const VerifyPage(),
+      builder: (context, state) {
+        final phoneNumber = state.extra as String;
+        return VerifyPage(phoneNumber: phoneNumber);
+      },
     ),
     GoRoute(
       path: Routes.roleSelectPage,
